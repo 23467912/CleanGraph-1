@@ -32,12 +32,7 @@ export const createGraph = (data) => {
 
 
 export const createCrawler = (data) => {
-  let result = text.includes("coursedetails")
-  if(result){
-    return axios.post("/crawler", data);
-  }else{
-    return axios.post("/unitdetail", data);
-  }
+  return axios.post("/crawler", data);
 };
 
 export const getGraphs = () => {
